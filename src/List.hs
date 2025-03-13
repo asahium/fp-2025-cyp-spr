@@ -1,4 +1,5 @@
 module List where
+import Data.List (delete)
 
 -- Generates all permutations of the given list.
 perms :: [a] -> [[a]]

@@ -1,6 +1,7 @@
 module RAList where
 
 import qualified Tree as T
+module Tree (fromList, splitAtLevels, null, singleton, deleteMin) where
 
 -- This is an implementation of a random-access list.
 -- It's possible to achieve logarithmic access by representing a list as a sequence of perfect trees.

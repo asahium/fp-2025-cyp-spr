@@ -13,7 +13,10 @@ nums = map reverse $ iterate (\xs -> if last xs == 0 then xs ++ [1] else xs ++ [
 -- toBinary 0 == Just [0]
 -- toBinary (-10) == Nothing
 toBinary :: Int -> Maybe [Int]
-toBinary n = if n < 0 then Nothing else Just $ reverse $ iterate (`divMod` 2) n !! 1
+toBinary n
+  | n < 0     = Nothing
+  | otherwise = Just $ reverse $ unfoldr (\x -> if x == 0 then Nothing else Just (x `mod` 2, x `div` 2)) n
+
 
 -- Computes the integer from a given reversed binary representation
 -- fromBinary [0,1,1] == Just 6
