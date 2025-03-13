@@ -1,4 +1,5 @@
 module Binary where
+import Data.List (unfoldr)
 
 -- Checks that the given list is a valid reversed binary representation
 isValid :: [Int] -> Maybe [Int]

@@ -2,7 +2,7 @@ module List where
 import Data.List (delete)
 
 -- Generates all permutations of the given list.
-perms :: [a] -> [[a]]
+perms :: Eq a => [a] -> [[a]]
 perms [] = [[]]
 perms xs = [x:ys | x <- xs, ys <- perms (delete x xs)]
 
