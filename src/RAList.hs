@@ -65,7 +65,7 @@ uncons (One t : ts) =
   let xs = T.toList t
   in case xs of
       [] -> Nothing
-      (y:ys) -> Just (y, if null ys then Zero : ts else One (buildTree ys) : ts)
+      (y:ys) -> Just (y, if Prelude.null ys then Zero : ts else One (buildTree ys) : ts)
 
 -- Updates the k-th element of the list with the given value
 update :: Int -> a -> RAList a -> RAList a
