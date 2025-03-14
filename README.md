@@ -1,4 +1,4 @@
-# HW03 
+# HW03
 
 ## Deadline 23:59 19.03.2025
 
@@ -8,4 +8,4 @@
 4. [4 points] Implement the functions in [src/RAList.hs](src/RAList.hs)
 5. [2 points] Test functions `toList` and `wellFromed` from [src/RAList.hs](src/RAList.hs)
 
-Make sure your code passes the github action. 
+Make sure your code passes the github action.
